@@ -1,15 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 
+import BookDetail from '../containers/BookDetail';
 import BookList from '../containers/BookList';
 
-export class App extends Component {
-	render() {
-		return (
-			<div>
-				<BookList />
-			</div>
-		);
-	}
-}
+export const App = () => {
+	return (
+		<div>
+			<BookDetail />
+			<BookList />
+		</div>
+	);
+};
 
 export default App;
