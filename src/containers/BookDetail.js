@@ -1,5 +1,7 @@
 import React, {PureComponent} from 'react';
 
+import PropTypes from 'prop-types-defined';
+
 import {connect} from 'react-redux';
 
 export class BookDetail extends PureComponent {
@@ -23,5 +25,9 @@ function mapStatetoProps(state) {
 		activeBook : state.activeBook,
 	};
 }
+
+BookDetail.propTypes = {
+	activeBook : PropTypes.object.isDefined,
+};
 
 export default connect(mapStatetoProps)(BookDetail);
