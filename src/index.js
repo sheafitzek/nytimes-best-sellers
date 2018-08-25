@@ -9,10 +9,12 @@ import reducers from './reducers';
 
 import App from './components/App';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+// create redux store
+const store = applyMiddleware()(createStore);
 
 render(
-	<Provider store={createStoreWithMiddleware(reducers)}>
+	<Provider store={store(reducers)}>
+		{/* wrap App in store provider */}
 		<App />
 	</Provider>,
 	document.getElementById(`root`)
